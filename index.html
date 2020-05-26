@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <svg>
+      <filter id="shad" x="0%" y="0%" width="100%" height="100%">
+        <feOffset in="SourceGraphic" dx="0" dy=".5"></feOffset>
+        <feGaussianblur stdDeviation=".5" result="SHAD"></feGaussianblur>
+        <feFlood flood-color="rgba(0,0,0,.3)" result="COLOR"></feFlood>
+        <feComposite
+          in="COLOR"
+          in2="SHAD"
+          operator="in"
+          result="SHADOW"
+        ></feComposite>
+        <feMerge>
+          <feMergeNode in="SHADOW" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </svg>
+    <!-- ########################################-->
+    <!-- <div class="start" id="start1"></div> -->
+
+    <div id="interface1" class="interface">
+      <div class="messege_header">
+        <div class="prev">
+          <i class="fas fa-arrow-left"></i>
+          <div class="face"></div>
+        </div>
+        <div class="contacte_name">
+          <div class="name">
+            Pape M. Ndiaye
+          </div>
+        </div>
+        <div class="param">
+          <div class="inner_param">
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+      </div>
+      <div class="option_header">
+        <div class="option_close">
+          <div class="close opt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div class="number">
+            0
+          </div>
+        </div>
+        <div class="option_resend opt">
+          <i class="fas fa-reply"></i>
+        </div>
+        <div class="option_delete opt">
+          <i class="fas fa-trash"></i>
+        </div>
+      </div>
+      <div class="message_container" id="message_container1">
+        <div class="bolck">
+          <div class="mesure"></div>
+        </div>
+      </div>
+
+      <!-- ############################################################-->
+      <div class="innerForm_hidden">
+        <div class="resend_cotainer">
+          <h5>J.A.C</h5>
+          <p></p>
+        </div>
+      </div>
+
+      <form class="form_container" action="#">
+        <div class="innerForm_container">
+          <div class="emojis">
+            <i class="fas fa-smile-beam"></i>
+          </div>
+          <textarea
+            name="message"
+            placeholder="..."
+            class="the_form"
+            id="the_form1"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="pins">
+            <i class="fab fa-pushed"></i>
+            <i class="fas fa-camera-retro"></i>
+          </div>
+        </div>
+
+        <div type="submit" class="submit_btn" id="submit_btn1">
+          <i class="fas fa-paper-plane"></i>
+        </div>
+      </form>
+    </div>
+
+    <!-- ############################################################################# -->
+    <!-- ############################################################################# -->
+    <!-- ############################################################################# -->
+    <!-- ############################################################################# -->
+    <!-- ############################################################################# -->
+    <!-- ############################################################################# -->
+    <!-- <div class="start" id="start2"></div> -->
+
+    <div id="interface2" class="interface">
+      <div class="messege_header">
+        <div class="prev">
+          <i class="fas fa-arrow-left"></i>
+
+          <div class="face"></div>
+        </div>
+        <div class="contacte_name">
+          <div class="name">
+            J.A.C
+          </div>
+        </div>
+        <div class="param">
+          <div class="inner_param">
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+      </div>
+      <div class="option_header">
+        <div class="option_close">
+          <div class="close opt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div class="number">
+            0
+          </div>
+        </div>
+        <div class="option_resend opt">
+          <i class="fas fa-reply"></i>
+        </div>
+        <div class="option_delete opt">
+          <i class="fas fa-trash"></i>
+        </div>
+      </div>
+
+      <div id="message_container2" class="message_container">
+        <div class="bolck">
+          <div class="A"></div>
+        </div>
+      </div>
+      <!-- ########################################-->
+      <div class="innerForm_hidden">
+        <div class="resend_cotainer">
+          <h5>Pape m.</h5>
+          <p></p>
+        </div>
+      </div>
+      <form class="form_container" action="">
+        <div class="innerForm_container">
+          <div class="emojis">
+            <i class="fas fa-smile-beam"></i>
+          </div>
+          <textarea
+            name="message"
+            placeholder="..."
+            class="the_form"
+            id="the_form2"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="pins">
+            <i class="fab fa-pushed"></i>
+            <i class="fas fa-camera-retro"></i>
+          </div>
+        </div>
+        <div id="submit_btn2" class="submit_btn">
+          <i class="fas fa-paper-plane"></i>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

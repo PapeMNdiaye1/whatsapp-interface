@@ -1,0 +1,160 @@
+#interface2 {
+  background-image: url();
+  // background-image: url(images/1df96f2cfa327c2ea7f104bc579a3ad4.gif);
+  // background-size: 110%;
+  // background-position: center;
+  // background-position-y: 11em;
+  // background-repeat: no-repeat;
+  &::after {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    background-color: #9f9f9f;
+    background-image: url(images/1df96f2cfa327c2ea7f104bc579a3ad4.gif);
+    background-size: 110%;
+    background-position: center;
+    background-position-y: 11em;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    z-index: -1;
+  }
+
+  .messege_header,
+  .option_header {
+    background: var(--Darck);
+    color: #222;
+    div {
+      color: gray;
+    }
+    .prev {
+      .face {
+        background: #000;
+        background-image: url("images/profile.png");
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+  .message_container {
+    .bolck {
+      width: 100%;
+      height: 90%;
+      background-image: url(images/Logo.svg);
+      background-size: 140%;
+      background-position: center;
+      background-position-x: 40%;
+      background-repeat: no-repeat;
+      filter: grayscale(100%);
+      opacity: 0.4;
+    }
+  }
+  .name {
+    &::after {
+      content: "online";
+    }
+  }
+  .innerForm_hidden {
+    background: var(--Darck);
+    .resend_cotainer {
+      p {
+        color: gray;
+      }
+      h5 {
+        color: #f1f1f1;
+      }
+      &::before {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+  .innerForm_container {
+    background: var(--Darck);
+    .emojis {
+      color: gray;
+    }
+    .the_form {
+      background: var(--Darck);
+      color: #f1f1f1;
+    }
+    .pins {
+      color: gray;
+    }
+  }
+  .submit_btn {
+    background-color: gray;
+    // color: #f1f1f1;
+  }
+  //   #######################################
+  .send {
+    background-color: var(--lightGreen2);
+    border-bottom: 0.8em var(--lightGreen2) solid;
+    color: #000;
+    &::after {
+      border-left: 0.5em var(--lightGreen2) solid;
+    }
+    .time {
+      color: rgba(0, 0, 0, 0.9);
+    }
+    .resend {
+      &::after {
+        content: "You";
+        color: #f1f1f1;
+      }
+      p {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+  .receiv {
+    background-color: gray;
+    border-bottom: 0.8em gray solid;
+    // color: #f1f1f1;
+    &::after {
+      border-right: 0.5em gray solid;
+    }
+    .time {
+      color: #000;
+    }
+    .resend {
+      p {
+        color: gray;
+      }
+    }
+  }
+  // ###############
+  .resend {
+    background: rgba(0, 0, 0, 0.4);
+    &::after {
+      content: "Pape M.";
+      color: #f1f1f1;
+    }
+    &::before {
+      background-color: #f1f1f1;
+    }
+    p {
+      color: #000;
+    }
+  }
+  // ######################"
+  .simple_message2 {
+    border-bottom: 5px transparent solid;
+    padding: 0.1em 0.3em 0em 0.3em;
+  }
+  .message_selected {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .option_header_visible {
+    z-index: 2;
+  }
+}

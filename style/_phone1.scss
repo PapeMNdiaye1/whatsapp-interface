@@ -1,0 +1,62 @@
+#interface1 {
+  .messege_header,
+  .option_header {
+    background: var(--DarckGreen);
+    div {
+      color: #f1f1f1;
+    }
+  }
+  .innerForm_hidden {
+    background: var(--light);
+  }
+  .innerForm_container {
+    background: var(--light);
+    .emojis {
+      color: gray;
+    }
+    .the_form {
+      background: var(--light);
+    }
+    .pins {
+      color: gray;
+    }
+  }
+
+  //   #################################################""
+  .send {
+    background-color: var(--lightGreen);
+    border-bottom: 0.8em var(--lightGreen) solid;
+    &::after {
+      border-left: 0.5em var(--lightGreen) solid;
+    }
+  }
+  .receiv {
+    background-color: var(--light);
+    border-bottom: 0.8em var(--light) solid;
+    &::after {
+      border-right: 0.5em var(--light) solid;
+    }
+    .time {
+      color: #000;
+    }
+  }
+  // #######################"
+  .simple_message2 {
+    border-bottom: 5px transparent solid;
+    padding: 0.1em 0.3em 0em 0.3em;
+  }
+  .message_selected {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(139, 207, 229, 0.3);
+    }
+  }
+  .option_header_visible {
+    z-index: 2;
+  }
+}

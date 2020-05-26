@@ -1,0 +1,454 @@
+@mixin cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  // pointer-events: none;
+}
+p {
+  word-break: break-word;
+}
+body {
+  background: #222;
+  font-family: "Roboto";
+  --lightGreen: #e3ffca;
+  --lightGreen2: #f29472;
+  --DarckGreen: #075e55;
+  @include cent;
+  flex-wrap: wrap;
+  --light: snow;
+  --Darck: #181818;
+  // --check: flex-start;
+}
+
+svg {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  background: salmon;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.interface {
+  top: 12vh;
+  width: 15em;
+  height: 30em;
+  margin: auto;
+  overflow: hidden;
+  background-image: url("images/45cec757faf8d07318cc829dcf21c697.jpg");
+  background-size: 100%;
+  box-shadow: 1em 1em 0.6em rgba(0, 0, 0, 0.3);
+  // border-radius: 0.5em;
+  .messege_header,
+  .option_header {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+
+    .prev {
+      width: 20%;
+      height: 70%;
+      border-radius: 3em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .face {
+        width: 1.8em;
+        height: 1.8em;
+        border-radius: 50%;
+        background-image: url("images/PicsArt_09-12-02.44.39.jpg");
+        background-size: 130%;
+      }
+    }
+    .contacte_name {
+      left: 1em;
+      width: 45%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .name {
+        font-size: 0.8em;
+        font-weight: 800;
+        animation: name_anime 1s both;
+        &::after {
+          position: absolute;
+          width: 20em;
+          content: "online";
+          left: 0%;
+          bottom: -90%;
+          font-size: 0.8em;
+          font-weight: 100;
+          animation: online_anime 1s both;
+          animation-delay: 1s;
+        }
+      }
+    }
+    .param {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .inner_param {
+        width: 1.4em;
+        height: 1.4em;
+        @include cent;
+        border-radius: 50%;
+      }
+    }
+  }
+  .option_header {
+    z-index: 0;
+    @include cent;
+    justify-content: space-around;
+    div {
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 50%;
+      @include cent;
+      color: #f1f1f1;
+    }
+    .option_close {
+      width: 50%;
+      height: 100%;
+      border-radius: 0%;
+      justify-content: flex-start;
+      div {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      .close {
+      }
+      .number {
+        margin-left: 1em;
+      }
+    }
+    .option_delete {
+      // background: steelblue;
+    }
+    .option_resend {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .option_resend_visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  /* ############################################################# */
+  /* ############################################################# */
+  /* ############################################################# */
+  .message_container {
+    top: 0%;
+    width: 100%;
+    height: 414px;
+    overflow: scroll;
+    padding-bottom: 0px;
+    transition: top 0.3s;
+    .bolck {
+      width: 100%;
+      height: 90%;
+    }
+  }
+}
+
+/* ##################### */
+
+.form_container {
+  position: absolute;
+  bottom: 0%;
+  height: 13%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  // z-index: 3;
+
+  filter: url(#shad);
+
+  .innerForm_container {
+    max-width: 80%;
+    height: 55%;
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    overflow: hidden;
+
+    .emojis {
+      width: 1.5em;
+      height: 100%;
+      @include cent;
+    }
+    .the_form {
+      outline: none;
+      border: none;
+      resize: auto;
+      overflow-y: scroll;
+      width: 60%;
+      min-height: 1em;
+      height: 100%;
+      padding: 0.6em 0.7em 0em 0.7em;
+      font-family: "Roboto";
+
+      transition: all 1s;
+    }
+    .pins {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 0.9em;
+      left: 0;
+    }
+  }
+}
+.innerForm_hidden {
+  position: absolute;
+  width: 79.9%;
+  height: 5%;
+  bottom: 3%;
+  left: 1.9%;
+  border-radius: 0.3em 0.3em 1em 1em;
+  padding: 0.5%;
+  @include cent;
+  align-items: flex-start;
+  transition: height 0.3s;
+  .resend_cotainer {
+    top: 2%;
+    width: 97%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.2em;
+    overflow: hidden;
+    p {
+      top: 7%;
+      margin-left: 4%;
+      width: 96%;
+      height: 1.4em;
+      font-size: 0.7em;
+      overflow: hidden;
+    }
+    h5 {
+      color: darkgoldenrod;
+      top: 0.2em;
+      margin-left: 0.6em;
+      font-size: 0.7em;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.5%;
+      height: 100%;
+      background-color: darkgoldenrod;
+    }
+  }
+}
+
+.submit_btn {
+  border: none;
+  text-decoration: none;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--DarckGreen);
+  @include cent;
+}
+
+/* ######################################### */
+/* ######################################### */
+/* ######################################### */
+
+.message_send,
+.message_selected {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.1em;
+  filter: url(#shad);
+  padding: 0.2em 0em 0.2em 0em;
+}
+
+.send,
+.receiv {
+  max-width: 80%;
+  min-width: 20%;
+  min-height: 1.6em;
+  @include cent;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.1em 0.3em 0em 0.3em;
+  margin-right: 1em;
+  border-radius: 0.3em 0em 0.3em 0.3em;
+  word-break: break-word;
+  font-size: 0.8em;
+  pointer-events: none;
+  // ####################
+  .resend {
+    top: 0.2em;
+    width: 100%;
+    min-width: 2.5em;
+    height: 2.5em;
+    margin-bottom: 0.5em;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0.2em;
+    overflow: hidden;
+    box-shadow: 0.1px 0.1px 1px rgba(0, 0, 0, 0.5) inset;
+    &::after {
+      content: "J.A.C";
+      position: absolute;
+      width: 100%;
+      height: 12%;
+      color: var(--lightGreen2);
+      top: 12%;
+      left: 1em;
+      font-size: 0.75em;
+      font-weight: 900;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0.2em;
+      height: 100%;
+      background: var(--lightGreen2);
+    }
+    p {
+      top: 45%;
+      margin-left: 0.7em;
+      width: 84%;
+      height: 1.1em;
+      font-size: 0.9em;
+      font-weight: 900;
+      opacity: 0.6;
+      overflow: hidden;
+      word-break: break-word;
+      font-weight: 200;
+    }
+  }
+}
+
+.time {
+  position: absolute;
+  bottom: -1.3em;
+  right: 0.5em;
+  margin-left: 0.2em;
+  color: gray;
+  font-size: 0.5em;
+}
+.send::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -1em;
+  height: 0.07em;
+  border-bottom: 0.6em transparent solid;
+  color: #222;
+  border-right: 0.5em transparent solid;
+}
+/* ########################################################" */
+.message_receiv {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.2em 0em 0.2em 0em;
+  margin-bottom: 0.1em;
+  filter: url(#shad);
+}
+
+.receiv {
+  padding: 0.1em 0.3em 0em 0.3em;
+  margin-left: 1em;
+  border-radius: 0em 0.3em 0.3em 0.3em;
+}
+
+.receiv::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -1em;
+  height: 0.07em;
+  border-bottom: 0.6em transparent solid;
+  border-left: 0.5em transparent solid;
+  border-right: 0.5em var(--lightGreen) solid;
+}
+@import "./phone1";
+@import "./phone2";
+
+@keyframes name_anime {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -20%;
+  }
+}
+@keyframes online_anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// #############################
+//  EXTRA
+// ############################
+.simple_message {
+  border-radius: 0.3em;
+  &::after {
+    display: none;
+  }
+}
+.closer_message {
+  margin-top: -0.11em;
+}
+.simple_time {
+  position: relative;
+  bottom: -0.7em;
+  right: 0em;
+  margin-left: 0em;
+  margin-left: 0.4em;
+}
+.opt {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.7em;
+    height: 0.7em;
+    background: #f1f1f1;
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    border-radius: 50%;
+    transition: transform 1s, opacity 1s;
+  }
+  &:active::before {
+    transition-duration: 0s;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

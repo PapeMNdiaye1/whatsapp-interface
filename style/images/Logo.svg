@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- mon logo JAC  -->
+<svg id="logo" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#000;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:#f4922c;stroke:none;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:#000;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{display:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M567.5,417.5c0.04,1.26,12-5,11-10l-44.06-126.3c-0.56-1.62-2.09-2.7-3.8-2.7h-54.06
+	c-1.89,0-3.6,1.08-4.42,2.78L444.5,338.5c-5.51,9.98-0.16,16.44,11,21l-97-1c13.18-1.89,17-5,21-12
+	c70.39-135.7,99.79-193.71,107.09-208.2c0.7-1.4,1.74-1.25,2.23,0.24c23.27,70.73,72.25,206.95,93.68,268.97
+	c2.83,8.67,12.12,9.75,14,10H567.5z"/>
+<path class="st1" d="M478.5,267.5c16-31,22.65-47.7,26.11-54.29c1.12-2.13,4.69-1.97,5.89,0.29l18.41,53.99
+	c0.54,2.71-2.36,7.06-5.23,7.12l-42.95-0.2C478.4,274.45,477.43,269.57,478.5,267.5z"/>
+<path class="st2" d="M569.5,136.5c87,0,86,0,86,0l110,109c-93,101-93,101-93,101c-5.43,7.28-1.95,10.44,5,12h-100l103-111
+	L569.5,136.5z"/>
+<path class="st2" d="M351.9,136.79c-87,0-86,0-86,0l-110,109c93,101,93,101,93,101c5.43,7.28,1.95,10.44-5,12h100l-103-111
+	L351.9,136.79z"/>
+<path class="st3" d="M2689.5,136.5c87,0,86,0,86,0l110,109c-93,101-93,101-93,101c-5.43,7.28-1.95,10.44,5,12h-100l103-111
+	L2689.5,136.5z"/>
+</svg>

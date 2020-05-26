@@ -1,0 +1,879 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  word-break: break-word;
+}
+
+body {
+  background: #222;
+  font-family: "Roboto";
+  --lightGreen: #e3ffca;
+  --lightGreen2: #f29472;
+  --DarckGreen: #075e55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  --light: snow;
+  --Darck: #181818;
+}
+
+svg {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  background: salmon;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.interface {
+  top: 12vh;
+  width: 15em;
+  height: 30em;
+  margin: auto;
+  overflow: hidden;
+  background-image: url("images/45cec757faf8d07318cc829dcf21c697.jpg");
+  background-size: 100%;
+  -webkit-box-shadow: 1em 1em 0.6em rgba(0, 0, 0, 0.3);
+          box-shadow: 1em 1em 0.6em rgba(0, 0, 0, 0.3);
+  /* ############################################################# */
+  /* ############################################################# */
+  /* ############################################################# */
+}
+
+.interface .messege_header,
+.interface .option_header {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  z-index: 2;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.interface .messege_header .prev,
+.interface .option_header .prev {
+  width: 20%;
+  height: 70%;
+  border-radius: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.interface .messege_header .prev .face,
+.interface .option_header .prev .face {
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  background-image: url("images/PicsArt_09-12-02.44.39.jpg");
+  background-size: 130%;
+}
+
+.interface .messege_header .contacte_name,
+.interface .option_header .contacte_name {
+  left: 1em;
+  width: 45%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.interface .messege_header .contacte_name .name,
+.interface .option_header .contacte_name .name {
+  font-size: 0.8em;
+  font-weight: 800;
+  -webkit-animation: name_anime 1s both;
+          animation: name_anime 1s both;
+}
+
+.interface .messege_header .contacte_name .name::after,
+.interface .option_header .contacte_name .name::after {
+  position: absolute;
+  width: 20em;
+  content: "online";
+  left: 0%;
+  bottom: -90%;
+  font-size: 0.8em;
+  font-weight: 100;
+  -webkit-animation: online_anime 1s both;
+          animation: online_anime 1s both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.interface .messege_header .param,
+.interface .option_header .param {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.interface .messege_header .param .inner_param,
+.interface .option_header .param .inner_param {
+  width: 1.4em;
+  height: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.interface .option_header {
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.interface .option_header div {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f1f1f1;
+}
+
+.interface .option_header .option_close {
+  width: 50%;
+  height: 100%;
+  border-radius: 0%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.interface .option_header .option_close div {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.interface .option_header .option_close .number {
+  margin-left: 1em;
+}
+
+.interface .option_header .option_resend {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.interface .option_header .option_resend_visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.interface .message_container {
+  top: 0%;
+  width: 100%;
+  height: 414px;
+  overflow: scroll;
+  padding-bottom: 0px;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+.interface .message_container .bolck {
+  width: 100%;
+  height: 90%;
+}
+
+/* ##################### */
+.form_container {
+  position: absolute;
+  bottom: 0%;
+  height: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: url(#shad);
+          filter: url(#shad);
+}
+
+.form_container .innerForm_container {
+  max-width: 80%;
+  height: 55%;
+  border-radius: 2em;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.form_container .innerForm_container .emojis {
+  width: 1.5em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form_container .innerForm_container .the_form {
+  outline: none;
+  border: none;
+  resize: auto;
+  overflow-y: scroll;
+  width: 60%;
+  min-height: 1em;
+  height: 100%;
+  padding: 0.6em 0.7em 0em 0.7em;
+  font-family: "Roboto";
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.form_container .innerForm_container .pins {
+  width: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9em;
+  left: 0;
+}
+
+.innerForm_hidden {
+  position: absolute;
+  width: 79.9%;
+  height: 5%;
+  bottom: 3%;
+  left: 1.9%;
+  border-radius: 0.3em 0.3em 1em 1em;
+  padding: 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.innerForm_hidden .resend_cotainer {
+  top: 2%;
+  width: 97%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+
+.innerForm_hidden .resend_cotainer p {
+  top: 7%;
+  margin-left: 4%;
+  width: 96%;
+  height: 1.4em;
+  font-size: 0.7em;
+  overflow: hidden;
+}
+
+.innerForm_hidden .resend_cotainer h5 {
+  color: darkgoldenrod;
+  top: 0.2em;
+  margin-left: 0.6em;
+  font-size: 0.7em;
+}
+
+.innerForm_hidden .resend_cotainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5%;
+  height: 100%;
+  background-color: darkgoldenrod;
+}
+
+.submit_btn {
+  border: none;
+  text-decoration: none;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--DarckGreen);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ######################################### */
+/* ######################################### */
+/* ######################################### */
+.message_send,
+.message_selected {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.1em;
+  -webkit-filter: url(#shad);
+          filter: url(#shad);
+  padding: 0.2em 0em 0.2em 0em;
+}
+
+.send,
+.receiv {
+  max-width: 80%;
+  min-width: 20%;
+  min-height: 1.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.1em 0.3em 0em 0.3em;
+  margin-right: 1em;
+  border-radius: 0.3em 0em 0.3em 0.3em;
+  word-break: break-word;
+  font-size: 0.8em;
+  pointer-events: none;
+}
+
+.send .resend,
+.receiv .resend {
+  top: 0.2em;
+  width: 100%;
+  min-width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 0.5em;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.2em;
+  overflow: hidden;
+  -webkit-box-shadow: 0.1px 0.1px 1px rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0.1px 0.1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+
+.send .resend::after,
+.receiv .resend::after {
+  content: "J.A.C";
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  color: var(--lightGreen2);
+  top: 12%;
+  left: 1em;
+  font-size: 0.75em;
+  font-weight: 900;
+}
+
+.send .resend::before,
+.receiv .resend::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.2em;
+  height: 100%;
+  background: var(--lightGreen2);
+}
+
+.send .resend p,
+.receiv .resend p {
+  top: 45%;
+  margin-left: 0.7em;
+  width: 84%;
+  height: 1.1em;
+  font-size: 0.9em;
+  font-weight: 900;
+  opacity: 0.6;
+  overflow: hidden;
+  word-break: break-word;
+  font-weight: 200;
+}
+
+.time {
+  position: absolute;
+  bottom: -1.3em;
+  right: 0.5em;
+  margin-left: 0.2em;
+  color: gray;
+  font-size: 0.5em;
+}
+
+.send::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -1em;
+  height: 0.07em;
+  border-bottom: 0.6em transparent solid;
+  color: #222;
+  border-right: 0.5em transparent solid;
+}
+
+/* ########################################################" */
+.message_receiv {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2em 0em 0.2em 0em;
+  margin-bottom: 0.1em;
+  -webkit-filter: url(#shad);
+          filter: url(#shad);
+}
+
+.receiv {
+  padding: 0.1em 0.3em 0em 0.3em;
+  margin-left: 1em;
+  border-radius: 0em 0.3em 0.3em 0.3em;
+}
+
+.receiv::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -1em;
+  height: 0.07em;
+  border-bottom: 0.6em transparent solid;
+  border-left: 0.5em transparent solid;
+  border-right: 0.5em var(--lightGreen) solid;
+}
+
+#interface1 .messege_header,
+#interface1 .option_header {
+  background: var(--DarckGreen);
+}
+
+#interface1 .messege_header div,
+#interface1 .option_header div {
+  color: #f1f1f1;
+}
+
+#interface1 .innerForm_hidden {
+  background: var(--light);
+}
+
+#interface1 .innerForm_container {
+  background: var(--light);
+}
+
+#interface1 .innerForm_container .emojis {
+  color: gray;
+}
+
+#interface1 .innerForm_container .the_form {
+  background: var(--light);
+}
+
+#interface1 .innerForm_container .pins {
+  color: gray;
+}
+
+#interface1 .send {
+  background-color: var(--lightGreen);
+  border-bottom: 0.8em var(--lightGreen) solid;
+}
+
+#interface1 .send::after {
+  border-left: 0.5em var(--lightGreen) solid;
+}
+
+#interface1 .receiv {
+  background-color: var(--light);
+  border-bottom: 0.8em var(--light) solid;
+}
+
+#interface1 .receiv::after {
+  border-right: 0.5em var(--light) solid;
+}
+
+#interface1 .receiv .time {
+  color: #000;
+}
+
+#interface1 .simple_message2 {
+  border-bottom: 5px transparent solid;
+  padding: 0.1em 0.3em 0em 0.3em;
+}
+
+#interface1 .message_selected::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 207, 229, 0.3);
+}
+
+#interface1 .option_header_visible {
+  z-index: 2;
+}
+
+#interface2 {
+  background-image: url();
+}
+
+#interface2::after {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  background-color: #9f9f9f;
+  background-image: url(images/1df96f2cfa327c2ea7f104bc579a3ad4.gif);
+  background-size: 110%;
+  background-position: center;
+  background-position-y: 11em;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  z-index: -1;
+}
+
+#interface2 .messege_header,
+#interface2 .option_header {
+  background: var(--Darck);
+  color: #222;
+}
+
+#interface2 .messege_header div,
+#interface2 .option_header div {
+  color: gray;
+}
+
+#interface2 .messege_header .prev .face,
+#interface2 .option_header .prev .face {
+  background: #000;
+  background-image: url("images/profile.png");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#interface2 .message_container .bolck {
+  width: 100%;
+  height: 90%;
+  background-image: url(images/Logo.svg);
+  background-size: 140%;
+  background-position: center;
+  background-position-x: 40%;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.4;
+}
+
+#interface2 .name::after {
+  content: "online";
+}
+
+#interface2 .innerForm_hidden {
+  background: var(--Darck);
+}
+
+#interface2 .innerForm_hidden .resend_cotainer p {
+  color: gray;
+}
+
+#interface2 .innerForm_hidden .resend_cotainer h5 {
+  color: #f1f1f1;
+}
+
+#interface2 .innerForm_hidden .resend_cotainer::before {
+  background-color: #f1f1f1;
+}
+
+#interface2 .innerForm_container {
+  background: var(--Darck);
+}
+
+#interface2 .innerForm_container .emojis {
+  color: gray;
+}
+
+#interface2 .innerForm_container .the_form {
+  background: var(--Darck);
+  color: #f1f1f1;
+}
+
+#interface2 .innerForm_container .pins {
+  color: gray;
+}
+
+#interface2 .submit_btn {
+  background-color: gray;
+}
+
+#interface2 .send {
+  background-color: var(--lightGreen2);
+  border-bottom: 0.8em var(--lightGreen2) solid;
+  color: #000;
+}
+
+#interface2 .send::after {
+  border-left: 0.5em var(--lightGreen2) solid;
+}
+
+#interface2 .send .time {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+#interface2 .send .resend::after {
+  content: "You";
+  color: #f1f1f1;
+}
+
+#interface2 .send .resend p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#interface2 .receiv {
+  background-color: gray;
+  border-bottom: 0.8em gray solid;
+}
+
+#interface2 .receiv::after {
+  border-right: 0.5em gray solid;
+}
+
+#interface2 .receiv .time {
+  color: #000;
+}
+
+#interface2 .receiv .resend p {
+  color: gray;
+}
+
+#interface2 .resend {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#interface2 .resend::after {
+  content: "Pape M.";
+  color: #f1f1f1;
+}
+
+#interface2 .resend::before {
+  background-color: #f1f1f1;
+}
+
+#interface2 .resend p {
+  color: #000;
+}
+
+#interface2 .simple_message2 {
+  border-bottom: 5px transparent solid;
+  padding: 0.1em 0.3em 0em 0.3em;
+}
+
+#interface2 .message_selected::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#interface2 .option_header_visible {
+  z-index: 2;
+}
+
+@-webkit-keyframes name_anime {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -20%;
+  }
+}
+
+@keyframes name_anime {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -20%;
+  }
+}
+
+@-webkit-keyframes online_anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes online_anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.simple_message {
+  border-radius: 0.3em;
+}
+
+.simple_message::after {
+  display: none;
+}
+
+.closer_message {
+  margin-top: -0.11em;
+}
+
+.simple_time {
+  position: relative;
+  bottom: -0.7em;
+  right: 0em;
+  margin-left: 0em;
+  margin-left: 0.4em;
+}
+
+.opt::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.7em;
+  height: 0.7em;
+  background: #f1f1f1;
+  -webkit-transform: translate(-50%, -50%) scale(3);
+          transform: translate(-50%, -50%) scale(3);
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.opt:active::before {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+/*# sourceMappingURL=style.css.map */
